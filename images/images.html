@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- This example is based on examples from "HTML & CSS: design and build websites" by Jon Duckett -->
+
+<html>
+	<head>
+		<title>Image Sizes, Aligning Images, and Centering Images</title>
+		<style type="text/css">
+			img.large {
+				width: 500px;
+				height: 500px;}
+			img.medium {
+				width: 250px;
+				height: 250px;}
+			img.small {
+				width: 100px;
+				height: 100px;}
+			
+			body {
+				font-family: Georgia, "Times New Roman", serif;
+				color: #665544;}
+				
+			img.align-left	{
+				float: left;
+				margin-right: 10px;}
+			img.align-right	{
+				float: right;
+				margin-left: 10px;}
+
+			img.align-center {
+				display: block;
+				margin: 0px auto;}	
+		</style>
+	</head>
+	
+	<body>
+		<div>
+			<img src="images/magnolia-large.jpg" class="large" alt="Magnolia" />
+			<img src="images/magnolia-medium.jpg" class="medium" alt="Magnolia" />
+			<img src="images/magnolia-small.jpg" class="small" alt="Magnolia" />
+		</div><br/><br/>
+		
+		<div>
+			<p><img src="images/magnolia-medium.jpg" alt="Magnolia" class="align-left medium" /><b><i>Magnolia</i></b> is a large genus that contains over 200 flowering plant species. It is named after French botanist Pierre Magnol and, having evolved before bees appeared, the flowers were developed to encourage pollination by beetle.</p>
+			
+			<p><img src="images/magnolia-medium.jpg" alt="Magnolia" class="align-right medium" />Some magnolias, such as <i>Magnolia stellata</i> and <i>Magnolia soulangeana</i>, flower quite early in the spring before the leaves open. Others flower in late spring or early summer, such as <i>Magnolia grandiflora</i>.</p> 
+		</div><br/><br/><br/>
+		
+		<div>
+			<p><img src="images/magnolia-medium.jpg" alt="Magnolia" class="align-center medium" /><b><i>Magnolia</i></b> is a large genus that contains over 200 flowering plant species. It is named after French botanist Pierre Magnol and, having evolved before bees appeared, the flowers were developed to encourage pollination by beetle.</p>		
+		</div>
+	</body>
+</html>

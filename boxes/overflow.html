@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- This example refers to "HTML & CSS: design and build websites" by Jon Duckett -->
+
+<html>
+	<head>
+		<style type="text/css">
+			body {
+				font-family: Arial, Verdana, sans-serif;
+				color: #111111;
+				font-size: 90%;
+				line-height: 1.2em;
+				width: 200px;
+			}
+			
+			h2 {
+				color: #0088dd;
+				border-bottom: 1px solid #0088dd;
+			}
+			
+			p {
+				min-height: 30px;
+				max-height: 85px;
+			}
+
+			p.one {
+				overflow: hidden;
+			}
+			
+			p.two {
+				overflow: scroll;
+			}			
+		</style>
+		<title>Overflow</title>
+	</head>
+
+	<body>
+		<h2>Overflow Example</h2>
+		<p class="one">Overflow example for hidden value: 1. Overflow example for hidden value: 2. Overflow example for hidden value: 3. Overflow example for hidden value: 4. Overflow example for hidden value: 5. </p>
+		<p class="two">Overflow example for scroll value: 1. Overflow example for scroll value: 2. Overflow example for scroll value: 3. Overflow example for scroll value: 4. Overflow example for scroll value: 5.</p>
+	</body>
+</html>

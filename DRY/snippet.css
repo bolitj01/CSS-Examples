@@ -1,0 +1,22 @@
+:root{
+    --dark-theme-text-color: lightblue;
+}
+
+body{
+    font: 20pt Arial;
+    background: darkslategrey;
+}
+
+nav~li:hover{
+    color: aqua;
+}
+
+nav~li{
+    display:inline;
+}
+
+nav>ul{
+    display: inline;
+    list-style-type: none;
+}
+
