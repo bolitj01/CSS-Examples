@@ -16,19 +16,19 @@
 }
 
 .angular {
-    background-image: url('images/angular.png');
+    background-image: url('../example_images/angular.png');
 }
 
 .react {
-    background-image: url('images/react.png');
+    background-image: url('../example_images/react.png');
 }
 
 .vue {
-    background-image: url('images/vue.png');
+    background-image: url('../example_images/vue.png');
 }
 
 .django {
-    background-image: url('images/django.png');
+    background-image: url('../example_images/django.png');
 }
 
 /* New counter-style */

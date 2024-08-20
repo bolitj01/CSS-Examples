@@ -22,7 +22,7 @@ a:visited {
 
 .list {
     list-style-image: url("list-tables-forms/images/star.png");
-    width: 800px;
+    width: 80%;
 }
 
 .sub-list {

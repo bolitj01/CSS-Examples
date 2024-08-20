@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, Verdana, sans-serif;
+    color: #111111;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    /* border-spacing: 10px; */
+    /* empty-cells: hide; */
+}
+
+th,
+td {
+    padding: 7px 10px 10px 10px;
+}
+
+tr {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+th {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 90%;
+    border-bottom: 2px solid #111111;
+    border-top: 1px solid #999;
+    text-align: left;
+}
+
+tr:last-child {
+    border-bottom: 1px solid #999;
+}
+
+tr:nth-child(odd) {
+    background-color: #efefef;
+}
+
+tr:not(:first-child):hover {
+    background-color: #c3e6e5;
+    border-top: 1px solid cornflowerblue;
+    border-bottom: 1px solid cornflowerblue;
+}
+
+.money {
+    text-align: right;
+}
