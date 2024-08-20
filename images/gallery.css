@@ -1,0 +1,47 @@
+body {
+    color: #7b5126;
+    background-color: #d4d0c6;
+    font-family: Georgia, "Times New Roman", serif;
+    text-align: center;
+}
+
+header {
+    margin: 40px 0px 20px 0px;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery-item {
+    width:30%;
+}
+
+figure {
+    background: radial-gradient(circle, #ffffff, #cfb9b9);
+    padding: 9px;
+    margin: 0;
+}
+
+figure img {
+    width: 100%;
+    border: 1px solid #d6d6d6;
+}
+
+figcaption {
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Mobile view */
+@media (max-width: 600px) {
+    .row {
+        flex-direction: column;
+    }
+    .gallery-item {
+        width:70%;
+    }
+}

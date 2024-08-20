@@ -1,0 +1,29 @@
+main {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    z-index: 1;
+}
+
+/* The background image is set to the entire main */
+/* Workaround to control the opacity of the background image */
+main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('images/nature-background.jpg');
+    background-position: center;
+    background-repeat: repeat;
+    /* background-attachment: fixed; */
+    opacity: 0.25;
+    z-index: 0;
+}
+
+p {
+    font-size: 1.2em;
+    text-shadow: 5px 1px 5px #d6d6d6;
+}
