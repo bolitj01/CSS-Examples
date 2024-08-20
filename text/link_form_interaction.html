@@ -1,25 +1,58 @@
 <!DOCTYPE html>
-<!-- This example is from "HTML & CSS: design and build websites" by Jon Duckett -->
+<!-- This example is adapted from "HTML & CSS: design and build websites" by Jon Duckett -->
 
 <html>
 	<head>
 		<title>Link Visited</title>
 		<style type="text/css">
-			a:link {
-				color: deeppink;
-				text-decoration: none;}
+			body {
+				font-family: Arial, sans-serif;
+				color: #333333;
+			}
+
+			/* Link pseudo-classes */
+			a:link, .letter {
+				color: hotpink;
+				text-decoration: none;
+			}
 			a:visited {
-				color: black;}
+				color: gray;
+			}
 			a:hover {
 				color: deeppink;
-				text-decoration: underline;}
+				text-decoration: underline;
+			}
 			a:active {
-				color: darkcyan;}
+				color: aquamarine;
+			}
+
+			/* Form pseudo-classes */
+			input {
+				padding: 6px 12px 6px 12px;
+				border: 1px solid #665544;
+				color: #706e6e;
+				font-size: 1em;
+				border-radius: 10px;
+			}
+			input.submit:hover {
+				background-color: #32b1c5;
+				color: whitesmoke;
+			}
+			input.submit:active {
+				background-color: chocolate;
+			}
+			input.text:focus {
+				color:#665544;
+			}
+			input.text::placeholder, input.text {
+				color: #c37425;
+			}
 		</style>
 	</head>
 	
 	<body>
-		<h1>Dog Breeds: <span style="color: deeppink;">B</span></h1>
+		<h1>Link Interaction</h1>
+		<h2>Dog Breeds: <span class="letter">B</span></h2>
 		<ul>
 			<li><a href="http://en.wikipedia.org/wiki/Basset_Hound">Basset Hound</a></li>
 			<li><a href="http://en.wikipedia.org/wiki/Beagle">Beagle</a></li>
@@ -28,7 +61,7 @@
 			<li><a href="http://en.wikipedia.org/wiki/Bedlington_Terrier">Bedlington Terrier</a></li>
 			<li><a href="http://en.wikipedia.org/wiki/Belgian_Shepherd_Dog_(Groenendael)">Belgian Shepherd</a></li>
 			<li><a href="http://en.wikipedia.org/wiki/Bergamasco_Shepherd">Bergamasco</a></li>
-			<li><a href="http://en.wikipedia.org/wiki/Bichon_Fris�">Bichon Frise</a></li>
+			<li><a href="https://en.wikipedia.org/wiki/Bichon_Fris%C3%A9">Bichon Frisé</a></li>
 			<li><a href="http://en.wikipedia.org/wiki/Bloodhound">Bloodhound</a></li>
 			<li><a href="http://en.wikipedia.org/wiki/Bolognese_(dog)">Bolognese</a></li>
 			<li><a href="http://en.wikipedia.org/wiki/Border_Collie">Border Collie</a></li>
@@ -39,5 +72,12 @@
 			<li><a href="http://en.wikipedia.org/wiki/Bull_Terrier">Bull Terrier</a></li>
 			<li><a href="http://en.wikipedia.org/wiki/Bulldog">Bulldog</a></li>
 		</ul>
+
+		<h1>Form Interaction</h1>
+		<form>
+			<input type="text" class="text" placeholder="Enter favorite dog breed"/>
+			<input type="submit" class="submit"/>
+		</form>
+
 	</body>
 </html>

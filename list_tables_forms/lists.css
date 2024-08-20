@@ -1,0 +1,44 @@
+.frameworks-list {
+    /* Remove default bullets */
+    list-style: none;
+    padding-left: 40px;
+    font: 1.5em sans-serif;
+}
+
+.frameworks-list li {
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 25px;
+    /* Space for the image */
+    padding-left: 30px;
+    /* Space between items */
+    margin-bottom: 15px;
+}
+
+.angular {
+    background-image: url('images/angular.png');
+}
+
+.react {
+    background-image: url('images/react.png');
+}
+
+.vue {
+    background-image: url('images/vue.png');
+}
+
+.django {
+    background-image: url('images/django.png');
+}
+
+/* New counter-style */
+@counter-style repeating-emoji {
+    system: cyclic;
+    symbols: "\1F431" "\1F984";
+    suffix: " ";
+}
+
+/* Apply the counter to the list */
+ol {
+    list-style: repeating-emoji;
+}

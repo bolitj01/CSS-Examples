@@ -1,0 +1,25 @@
+body {
+    font-family: Georgia; /* Children inherit */
+    color: #3A3A3A; /* Children inherit */
+    line-height: 1.6; /* Children inherit */
+    background-color: #c8b4b4; /* Not inherited */
+    margin: 0; /* Not inherited */
+    padding: 20px; /* Not inherited */
+}
+.animal-info {
+    border: 2px solid #D2691E;
+    background-color: #FFEFD5;
+    padding: inherit;
+    border-radius: 8px;
+
+    h1 {
+        color: #8B4513;
+        margin-bottom: 10px;
+    }
+    p {
+        padding: inherit; /* Inherit from .animal-info */
+    }
+    p:last-child {
+        border: inherit; /* Inherit from .animal-info */
+    }
+}

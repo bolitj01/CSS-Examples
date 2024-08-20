@@ -1,0 +1,9 @@
+* { font-family: Arial; }
+h1 { font-family: 'Courier New'; }
+i { color: green; }
+i { color: tomato; }
+b { color: pink; }
+p b { color: deepskyblue !important; }
+p b { color: violet; }
+p#intro { font-size: 2rem; }
+p { font-size: 1.5rem; }

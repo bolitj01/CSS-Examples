@@ -7,9 +7,9 @@
 			body {
 				font-family: Arial, Verdana, sans-serif;
 				color: #111111;
-				font-size: 90%;
-				line-height: 1.2em;
-				width: 200px;
+				font-size: 2em;
+				line-height: 1.4em;
+				width: 50%;
 			}
 			
 			h2 {
@@ -18,24 +18,27 @@
 			}
 			
 			p {
-				min-height: 30px;
-				max-height: 85px;
+				min-height: 100px;
+				max-height: 200px;
+				padding-bottom: 2%;
+				border-bottom: 1px solid #0088dd;
 			}
 
-			p.one {
-				overflow: hidden;
+			p.cutoff {
+				overflow-y: hidden;
+				/* text-wrap: nowrap; */ /* Uncomment for x-axis scroll */
 			}
 			
-			p.two {
-				overflow: scroll;
-			}			
+			p.scrolling {
+				overflow-y: scroll;
+			}
 		</style>
 		<title>Overflow</title>
 	</head>
 
 	<body>
 		<h2>Overflow Example</h2>
-		<p class="one">Overflow example for hidden value: 1. Overflow example for hidden value: 2. Overflow example for hidden value: 3. Overflow example for hidden value: 4. Overflow example for hidden value: 5. </p>
-		<p class="two">Overflow example for scroll value: 1. Overflow example for scroll value: 2. Overflow example for scroll value: 3. Overflow example for scroll value: 4. Overflow example for scroll value: 5.</p>
+		<p class="cutoff">Overflow example for hidden value: 1. Overflow example for hidden value: 2. Overflow example for hidden value: 3. Overflow example for hidden value: 4. Overflow example for hidden value: 5. </p>
+		<p class="scrolling">Overflow example for scroll value: 1. Overflow example for scroll value: 2. Overflow example for scroll value: 3. Overflow example for scroll value: 4. Overflow example for scroll value: 5.</p>
 	</body>
 </html>

@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+a:link {
+    color: #169bd8;
+}
+a:visited {
+    color: #50399c;
+}
+
+#topics {
+    list-style-type: square;
+}
+
+.grid-container {
+    display: grid;
+}
+
+.list {
+    list-style-image: url("list-tables-forms/images/star.png");
+    width: 800px;
+}
+
+.sub-list {
+    list-style-image: none;
+    list-style-type: circle;
+}
+
+h1 {
+    color: #0000ff;
+}
+
+#contents>li {
+    margin: 15px 0px 10px 0px;
+}
