@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+/* Grid container */
+main {
+    display: grid;
+    /* 4 rows */
+    grid-template-rows: 4fr repeat(3, minmax(0, 3fr));
+    /* 4 columns */
+    grid-template-columns: repeat(4, 1fr);
+    height: 150vh;
+    /* Spacing between grid items */
+    gap: 1%;
+    justify-content: space-evenly;
+    align-items: start;
+    background-color: #83d4ed37;
+    padding: 1%;
+}
+
+/* Disciples */
+.card {
+    column-span: 1;
+    background-color: lightblue;
+    border-radius: 8px 8px 25px 25px;
+    width: 90%;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.2em;
+    border: 2px solid #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+
+    h2, h4 {
+        margin: 0;
+    }
+}
+
+/* Jesus spanning 2 columns in the top row */
+.jesus {
+    grid-column: 1 / span 4;
+    grid-row: 1;
+    text-align: center;
+    border: 2px solid #333;
+    justify-self: center;
+    width: 40%;
+
+    img {
+        max-height: 200px;
+    }
+}
+
+img {
+    max-width: 100%;
+    max-height: 150px;
+    margin: 4px;
+}
+
+p {
+    margin: 0;
+    font-size:1em;
+    /* Box shadow on top */
+    box-shadow: 0px 5px 6px 0px #86cee4;
+    border-radius: 20px;
+    padding-bottom: 3px;
+}
+
+/* Change grid to rows of 2 columns for 
+    smaller screens*/
+@media screen and (max-width: 960px) {
+    main {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+    }
+
+    .jesus {
+        grid-column: 1 / span 2;
+        width: 70%;
+    }
+}
