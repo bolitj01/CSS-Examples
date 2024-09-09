@@ -1,39 +1,64 @@
 body {
     font-family: Arial, sans-serif;
+    font-size: 1.5em;
     background-color: #f0f0f0;
     margin: 0;
     padding: 0;
 }
 
-a:link {
-    color: #169bd8;
-}
-a:visited {
-    color: #50399c;
+ul, h3, h4 {
+    margin: 4vh;
+    padding: 0;
 }
 
-#topics {
-    list-style-type: square;
+li {
+    list-style-type: none;
+    margin: 1.5vh 3vw;
 }
 
-.grid-container {
-    display: grid;
+/* Hide h3 and li initially */
+h3, h4, li {
+    opacity: 0;
+}
+/* Animation to sway back and forth */
+@keyframes sway {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(1deg);
+    }
+}
+/* Animation to fade in and move slightly */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    50% {
+        opacity: .5;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
-.list {
-    list-style-image: url("list-tables-forms/images/star.png");
-    width: 80%;
+/* Add animation with higher delay per speed# class */
+.speed1, .speed2, .speed3, .speed4, .speed4, .speed5 {
+    width: 25vw;
+    animation: fadeIn 1s ease-out .1s forwards, sway 1s ease-in-out alternate-reverse infinite;
+    
 }
-
-.sub-list {
-    list-style-image: none;
-    list-style-type: circle;
+.speed2 {
+    animation-delay: .2s;
 }
-
-h1 {
-    color: #0000ff;
+.speed3 {
+    animation-delay: .3s;
 }
-
-#contents>li {
-    margin: 15px 0px 10px 0px;
+.speed4 {
+    animation-delay: .4s;
+}
+.speed5 {
+    animation-delay: .5s;
 }
