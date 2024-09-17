@@ -1,20 +1,21 @@
 @import 'snippet.css';
 
-:root{
-    --dark-theme-background: black;
+:root {
+    --dark-theme-background: color-mix(in srgb, #616060 43.3%, #3fa8a8 58.9%);
+    /* Try color-mix on MDN https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/color-mix#color_mixer  */
     --dark-theme-color: white;
 }
 
-*{
+* {
     color: var(--dark-theme-text-color);
 }
 
-h1{
+h1 {
     background: var(--dark-theme-background);
     color: var(--dark-theme-color);
 }
 
-p{
+p {
     background: var(--dark-theme-background);
     color: var(--dark-theme-color);
 }

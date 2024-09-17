@@ -45,9 +45,9 @@ h3, h4, li {
 }
 
 /* Add animation with higher delay per speed# class */
-.speed1, .speed2, .speed3, .speed4, .speed4, .speed5 {
+.speed1, .speed2, .speed3, .speed4, .speed4, .speed5, .speed6 {
     width: 25vw;
-    animation: fadeIn 1s ease-out .1s forwards, sway 1s ease-in-out alternate-reverse infinite;
+    animation: fadeIn 1s ease-out .1s forwards;
     
 }
 .speed2 {
@@ -61,4 +61,11 @@ h3, h4, li {
 }
 .speed5 {
     animation-delay: .5s;
+}
+.speed6 {
+    animation-delay: .6s;
+}
+
+h3, h4 {
+    animation: fadeIn 1s ease-out .1s forwards, sway 1s ease-in-out alternate-reverse infinite !important;
 }
