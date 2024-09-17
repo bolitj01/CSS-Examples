@@ -12,7 +12,7 @@ nav ul {
 
 nav,
 footer {
-    background-color: #efefef;
+    background-color: #707070;
     padding: 0.5em 0;
 }
 
@@ -31,7 +31,7 @@ ul {
 
 .column {
     flex: 1;
-    background-color: #efefef;
+    background-color: #5e5e5e;
     height: 10em;
     padding: 2%;
 }
@@ -41,7 +41,7 @@ article {
     height: 10em;
     margin: 2% auto;
     padding-top: 1%;
-    background-color: #efefef;
+    background-color: #7b7b7b;
 }
 
 /* Accommodate smaller screens */

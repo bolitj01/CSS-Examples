@@ -30,7 +30,7 @@ input#submit {
     border: none;
     border-radius: 5px;
     width: 20%;
-}
+}   
 
 input#submit:hover {
     color: linen;
@@ -59,12 +59,12 @@ legend {
     background-image: url("../example_images/email.png");
     background-repeat: no-repeat;
     background-position: 1% center;
-    padding-left: 6%;
+    padding-left: 4vw;
 }
 
 #name {
     background-image: url("../example_images/web.png");
     background-repeat: no-repeat;
     background-position: 1% center;
-    padding-left: 6%;
+    padding-left: 4vw;
 }

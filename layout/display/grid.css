@@ -11,7 +11,7 @@ body {
 main {
     display: grid;
     /* 4 rows */
-    grid-template-rows: 4fr repeat(3, minmax(0, 3fr));
+    grid-template-rows: 4fr repeat(3, minmax(1fr, 3fr));
     /* 4 columns */
     grid-template-columns: repeat(4, 1fr);
     height: 150vh;
@@ -83,5 +83,19 @@ p {
     .jesus {
         grid-column: 1 / span 2;
         width: 70%;
+    }
+}
+
+/* Change grid to rows of 1 column for 
+    even smaller screens*/
+@media screen and (max-width: 600px) {
+    main {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(16, 1fr);
+    }
+
+    .jesus {
+        grid-column: 1;
+        width: 90%;
     }
 }
