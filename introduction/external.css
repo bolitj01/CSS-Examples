@@ -14,7 +14,7 @@ input {
 }
 
 input[type="submit"] {
-	background: hsl(0, 0%, 97%);
+	background: hsl(0, 0%, 70%);
 	border-radius: 6px; /* Rounded corners */
 	width: 9em;
 }
@@ -32,7 +32,7 @@ input[type="text"]:focus {
 .search-container {
 	position: relative;
 	border-radius: 20px;
-	border: 2px solid #f1f1f1;
+	border: 2px solid #b4b4b4;
 	width: 30em; /* 20 times the font size */
 	margin: 4vh auto; /* Center the container */
 	justify-content: center;
@@ -47,7 +47,7 @@ input[type="text"]:focus {
 	height: 60%; /* 60% of the parent's height */
 	width: auto; /* Maintain aspect ratio */
 	top: 20%;
-	left: 2%;
-	color:gray;
+	left: 2%;	
+	color:hsl(0, 0%, 88%);
 	fill: currentColor;
 }

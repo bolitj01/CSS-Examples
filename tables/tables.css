@@ -24,17 +24,17 @@ th {
     text-transform: uppercase;
     letter-spacing: 0.1em;
     font-size: 90%;
-    border-bottom: 2px solid #111111;
-    border-top: 1px solid #999;
+    border-bottom: 2px solid hsl(0, 0%, 7%);
+    border-top: 1px solid #2179a5;
     text-align: left;
 }
 
 tr:last-child {
-    border-bottom: 1px solid #999;
+    border-bottom: 1px solid #2179a5;
 }
 
 tr:nth-child(odd) {
-    background-color: #efefef;
+    background-color: #696969;
 }
 
 tr:not(:first-child):hover {
