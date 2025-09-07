@@ -7,26 +7,28 @@
 	<title>Absolute Positioning</title>
 	<style type="text/css">
 		body {
-			width: 100%;
 			font-family: Arial, Verdana, sans-serif;
 			color: #665544;
 		}
 
 		h1 {
 			position: absolute;
-			top: 100px;
-			left: 20px;
+			top: 15vh;
+			left: 60vw;
 			z-index: 2;
+			font-size: 3rem;
 		}
 
 		p {
-			width: 450px;
+			width: 50vw;
+			transition: width .5s, background-color 1.5s;
+			border-radius: 10px;
+			padding: 5px;
 		}
 
-		div {
-			position: relative;
-			border: 2px solid #5e2e0a;
-			padding: 10px;
+		p:hover {
+			width: 55vw;
+			background-color: aquamarine;
 		}
 	</style>
 </head>
@@ -58,11 +60,6 @@
 		the road, or the sudden emergence of a dog, the entire apparatus rotated forward on its front axle and the
 		rider, with his legs trapped under the handlebars, was dropped unceremoniously on his head. Thus the term
 		"taking a header" came into being.</p>
-	<hr>
-	<div>
-		Unless it's in another positioned element
-
-	</div>
 </body>
 
 </html>

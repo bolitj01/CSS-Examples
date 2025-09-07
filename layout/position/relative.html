@@ -6,35 +6,38 @@
 <head>
 	<title>Relative Positioning</title>
 	<style type="text/css">
+		h1 {
+			font-size: 2.5rem;
+		}
+
 		body {
-			font-family: Arial, Verdana, sans-serif;
 			color: #665544;
 		}
 
 		p {
-			width: 450px;
+			width: 70vw;
+			font-size: 2rem;
 		}
 
-		p.example {
+		p.shifted {
 			/* Moves the paragraph relative its typical flow position*/
 			position: relative;
 			top: 10px;
 			left: 100px;
+			border: #665544 solid 1px;
 		}
 
-		.square {
-			display: inline-block;
-			width: 100px;
-			height: 100px;
-			background-color: cornflowerblue;
+		img {
+			width: auto;
+			height: 20vh;
 			position: relative;
+			border: gray solid 1px;
 			top: 0;
 			left: 0;
-			transition: top .5s, left .5s, background-color .5s;
+			transition: top .5s, left .5s;
 		}
 		
-		.mover:hover {
-			background-color: pink;
+		img:hover {
 			top: 30px;
 			left: 30px;
 		}
@@ -42,13 +45,18 @@
 </head>
 
 <body>
-	<section>
+	<main>
 		<h1>The Evolution of the Bicycle</h1>
+		<section>
+			<img src="https://media1.tenor.com/m/p_uI2cRfjMoAAAAd/mr-bean-holiday-mister-bean-holiday.gif" alt="Bicycle 1">
+			<img src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/82614c38823695.5770ea557a3a8.gif" alt="Bicycle 2">
+			<img src="https://media0.giphy.com/media/v1.Y2lkPTZjMDliOTUybnBodGlncG02MHQxa2w1MGYwZXljanRzMDV2dWw3bGIwdzVrbm92aiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/wg4y5TWOFXN3a/200w.gif" alt="Bicycle 3">
+		</section>
 		<p>In 1817 Baron von Drais invented a walking machine that would help him get around the royal gardens faster:
 			two same-size in-line wheels, the front one steerable, mounted in a frame upon which you straddled. The
 			device was propelled by pushing your feet against the ground, thus rolling yourself and the device forward
 			in a sort of gliding walk.</p>
-		<p class="example">The machine became known as the Draisienne (or "hobby horse"). It was made entirely of wood.
+		<p class="shifted">The machine became known as the Draisienne (or "hobby horse"). It was made entirely of wood.
 			This enjoyed a short lived popularity as a fad, not being practical for transportation in any other place
 			than a well maintained pathway such as in a park or garden.</p>
 		<p>The next appearance of a two-wheeled riding machine was in 1865, when pedals were applied directly to the
@@ -56,13 +64,7 @@
 			since it's wooden structure combined with the cobblestone roads of the day made for an extremely
 			uncomfortable ride. They also became a fad and indoor riding academies, similar to roller rinks, could be
 			found in large cities.</p>
-	</section>
-	<section class="squares">
-		<!-- Three squares, middle one is offset relative -->
-		<div class="square"></div>
-		<div class="square mover"></div>
-		<div class="square"></div>
-	</section>
+	</main>
 </body>
 
 </html>

@@ -1,11 +1,11 @@
 * {
     font-family: Arial, Verdana, sans-serif;
-    --primary-color: #e8913add;
-    --secondary-color: #eeaade34;
+    --primary-color: #002b76dd;
+    --secondary-color: #e5aed8f3;
 }
 
 input {
-    border-bottom: 1px dotted #dcdcdc;
+    border-bottom: 2px dotted #dcdcdc;
     border-top: none;
     border-right: none;
     border-left: none;
@@ -15,7 +15,7 @@ input {
 }
 
 input:focus {
-    border: 1px dotted var(--primary-color);
+    border: 3px dotted var(--primary-color);
     outline: none;
 }
 
@@ -30,6 +30,7 @@ input#submit {
     border: none;
     border-radius: 5px;
     width: 20%;
+    font-weight: bold;
 }   
 
 input#submit:hover {
@@ -39,7 +40,7 @@ input#submit:hover {
 
 fieldset {
     width: 90%;
-    border: 1px solid #dcdcdc;
+    border: 3px solid #dcdcdc;
     border-radius: 10px;
     padding: 20px;
 }
