@@ -1,7 +1,18 @@
 * {
     font-family: Arial, Verdana, sans-serif;
-    color: #514233;
+    color: #3a2f13;
     text-align: center;
+}
+
+body {
+    background: linear-gradient(135deg, #76d576 0%, #f8e8bc 100%);
+    font-size: 1.2em;
+}
+
+nav,
+footer {
+    background-color: #4b7f3f;
+    padding: 0.5em 0;
 }
 
 nav ul {
@@ -10,10 +21,41 @@ nav ul {
     gap: 5%;
 }
 
-nav,
-footer {
-    background-color: #707070;
-    padding: 0.5em 0;
+nav li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav a {
+    color: #fdf6e3;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+nav a:hover {
+    color: #ffe066;
+}
+
+nav a img {
+    height: 125px;
+    width: auto;
+    margin: 4px 0 0 0;
+    vertical-align: middle;
+}
+
+.column img {
+    height: 200px;
+    width: auto;
+    margin-bottom: 8px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 ul {
@@ -26,34 +68,66 @@ ul {
     flex-wrap: wrap;
     justify-content: space-evenly;
     gap: 5%;
-    padding: 2%;
+    padding: 1%;
 }
 
 .column {
     flex: 1;
-    background-color: #5e5e5e;
-    height: 10em;
+    background: linear-gradient(135deg, #b7e4c7 0%, #fdf6e3 100%);
+    border-radius: 16px;
+    box-shadow: 0 2px 10px rgba(75,127,63,0.08);
     padding: 2%;
+}
+
+.column h3 {
+    color: #2d6a4f;
+    margin-bottom: 0.5em;
+}
+
+.column ul li {
+    color: #3a2f13;
+    background-color: #e9f5db;
+    border-radius: 8px;
+    margin: 0.3em 0;
+    padding: 0.2em 0;
 }
 
 article {
     width: 90%;
-    height: 10em;
-    margin: 2% auto;
+    min-height: 8em;
+    margin: auto;
     padding-top: 1%;
-    background-color: #7b7b7b;
+    background:  #b7e4c7;
+    border-radius: 0 0 16px 16px;
+    box-shadow: 0 2px 10px rgba(75,127,63,0.08);
+}
+
+h1 {
+    color: #2d6a4f;
+    margin-bottom: 0.5em;
+}
+
+h2 {
+    color: #4b7f3f;
+}
+
+footer p {
+    color: #fdf6e3;
 }
 
 /* Accommodate smaller screens */
-@media (max-width: 600px) {
+@media (max-width: 900px) {
     nav {
-        width: 50%;
+        width: 90%;
         margin: 0 auto;
         padding: 1px 0;
     }
     nav ul{
         flex-direction: column;
         gap: 1vh;
+    }
+    nav a img {
+        height: 75px;
     }
     
     #columns {
