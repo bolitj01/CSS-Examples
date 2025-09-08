@@ -1,27 +1,76 @@
 <html>
 <head>
     <style>
+        body {
+            background: linear-gradient(120deg, #303f57 0%, #813e3e 100%);
+            font-family: 'Segoe UI', Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
 
-        div{
-            animation: colorchange 2s infinite alternate linear;
-            width: 25%;
-            height: 25%;
-            margin: auto;
+        .colorbox {
+            animation: colorchange 2.5s infinite alternate linear;
+            width: 320px;
+            height: 160px;
+            margin: 1em auto;
+            border-radius: 24px;
+            box-shadow: 0 4px 24px rgba(48,63,87,0.18);
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         @keyframes colorchange {
-            from{
-                background: pink;
-            }
-            to{
-                background: cyan;
-            }
+            0%   { background: #ffb6c1; }
+            25%  { background: #ffd700; }
+            50%  { background: #00bfff; }
+            75%  { background: #98fb98; }
+            100% { background: #ffb6c1; }
         }
-/* linear-gradient(to left top, rgb(48, 63, 87), rgb(129, 62, 62) */
+
+        .colortext {
+            font-size: 2em;
+            font-weight: bold;
+            animation: textcolor 2.5s infinite alternate linear;
+            transition: text-shadow 0.3s;
+            text-shadow: 0 2px 8px rgba(48,63,87,0.12);
+        }
+
+        @keyframes textcolor {
+            0%   { color: #303f57; }
+            25%  { color: #813e3e; }
+            50%  { color: #ffd700; }
+            75%  { color: #00bfff; }
+            100% { color: #303f57; }
+        }
+
+        .gradient-border {
+            color: white;
+            padding: 1em 2em;
+            border-radius: 16px;
+            border: 12px solid;
+            border-image: linear-gradient(90deg, #ffd700, #00bfff, #ffb6c1) 1;
+            font-size: 1.3em;
+            font-weight: 500;
+            animation: bordercolor 3s infinite alternate linear;
+        }
+
+        @keyframes bordercolor {
+            0%   { border-image: linear-gradient(90deg, #ffd700, #00bfff, #ffb6c1) 1; }
+            50%  { border-image: linear-gradient(90deg, #ffb6c1, #98fb98, #813e3e) 1; }
+            100% { border-image: linear-gradient(90deg, #ffd700, #00bfff, #ffb6c1) 1; }
+        }
     </style>
 </head>
 <body>
-    <div>
+    <div class="colorbox">
+        <span class="colortext">Colorful Animation!</span>
+    </div>
+    <div class="gradient-border">
+        Animated Gradient Border
     </div>
 </body>
 </html>
