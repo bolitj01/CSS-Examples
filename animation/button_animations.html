@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            background: linear-gradient(120deg, #e0f7fa 0%, #ffe0b2 100%);
+            font-family: 'Segoe UI', Arial, sans-serif;
+            text-align: center;
+            padding-top: 3em;
+        }
+
+        h1 {
+            color: #006064;
+            margin-bottom: 2em;
+        }
+
+        .btn-row {
+            display: flex;
+            justify-content: center;
+            gap: 2em;
+            flex-wrap: wrap;
+        }
+
+        button {
+            font-size: 1.2em;
+            font-weight: bold;
+            padding: 0.7em 2em;
+            border-radius: 16px;
+            border: none;
+            margin: 0.5em;
+            background: #ffd700;
+            color: #006064;
+            box-shadow: 0 2px 12px rgba(60, 60, 90, 0.12);
+            cursor: pointer;
+            transition: background 0.3s, color 0.3s, transform 0.2s;
+        }
+
+        button:hover {
+            background: #00bfff;
+            color: #fffde7;
+            transform: scale(1.08);
+        }
+
+        /* Bounce animation */
+        .bounce {
+            animation: bounce 1s infinite;
+        }
+
+        @keyframes bounce {
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(0);
+            }
+
+            40% {
+                transform: translateY(-30px);
+            }
+
+            60% {
+                transform: translateY(-15px);
+            }
+        }
+
+        /* Wiggle animation */
+        .wiggle {
+            animation: wiggle 1.2s infinite;
+        }
+
+        @keyframes wiggle {
+            0%,
+            100% {
+                transform: rotate(0deg);
+            }
+
+            20% {
+                transform: rotate(-10deg);
+            }
+
+            40% {
+                transform: rotate(10deg);
+            }
+
+            60% {
+                transform: rotate(-8deg);
+            }
+
+            80% {
+                transform: rotate(8deg);
+            }
+        }
+
+        /* Pulse animation */
+        .pulse {
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 #ffd700;
+            }
+
+            70% {
+                box-shadow: 0 0 0 12px rgba(255, 215, 0, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 #ffd700;
+            }
+        }
+
+        /* Slide in animation */
+        .slidein {
+            animation: slidein 1.2s cubic-bezier(.68, -0.55, .27, 1.55) forwards;
+        }
+
+        @keyframes slidein {
+            from {
+                transform: translateX(-100vw) scale(0.7);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0) scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* Flip animation */
+        .flip {
+            animation: flip 1.3s infinite;
+        }
+
+        @keyframes flip {
+            0% {
+                transform: rotateY(0deg);
+            }
+
+            50% {
+                transform: rotateY(180deg);
+            }
+
+            100% {
+                transform: rotateY(0deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS Animated Buttons</h1>
+    <div class="btn-row">
+        <button class="bounce">Bounce!</button>
+        <button class="wiggle">Wiggle!</button>
+        <button class="pulse">Pulse!</button>
+        <button class="slidein">Slide In!</button>
+        <button class="flip">Flip!</button>
+    </div>
+</body>
+
+</html>
