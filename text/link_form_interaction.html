@@ -2,82 +2,132 @@
 <!-- This example is adapted from "HTML & CSS: design and build websites" by Jon Duckett -->
 
 <html>
-	<head>
-		<title>Link Visited</title>
-		<style type="text/css">
-			body {
-				font-family: Arial, sans-serif;
-				color: #333333;
-			}
+  <head>
+    <title>Link Visited</title>
+    <style type="text/css">
+      body {
+        font-family: Arial, sans-serif;
+        color: #333333;
+      }
 
-			/* Link pseudo-classes */
-			a:link, .letter {
-				color: hotpink;
-				text-decoration: none;
-			}
-			a:visited {
-				color: gray;
-			}
-			a:hover {
-				color: deeppink;
-				text-decoration: underline;
-			}
-			a:active {
-				color: aquamarine;
-			}
+      /* Link pseudo-classes */
+      a:link,
+      .letter {
+        color: hotpink;
+        text-decoration: none;
+      }
+      a:visited {
+        color: gray;
+      }
+      a:hover {
+        color: deeppink;
+        text-decoration: underline;
+      }
+      a:active {
+        color: aquamarine;
+      }
 
-			/* Form pseudo-classes */
-			input {
-				padding: 6px 12px 6px 12px;
-				border: 1px solid #665544;
-				color: #706e6e;
-				font-size: 1em;
-				border-radius: 10px;
-			}
-			input.submit:hover {
-				background-color: #32b1c5;
-				color: whitesmoke;
-			}
-			input.submit:active {
-				background-color: chocolate;
-			}
-			input.text:focus {
-				color:#665544;
-			}
-			input.text::placeholder, input.text {
-				color: #c37425;
-			}
-		</style>
-	</head>
-	
-	<body>
-		<h1>Link Interaction</h1>
-		<h2>Dog Breeds: <span class="letter">B</span></h2>
-		<ul>
-			<li><a href="http://en.wikipedia.org/wiki/Basset_Hound">Basset Hound</a></li>
-			<li><a href="http://en.wikipedia.org/wiki/Beagle">Beagle</a></li>
-			<li><a href="http://en.wikipedia.org/wiki/Bearded_Collie">Bearded Collie</a></li>
-			<li><a href="http://en.wikipedia.org/wiki/Beauceron">Beauceron</a></li>
-			<li><a href="http://en.wikipedia.org/wiki/Bedlington_Terrier">Bedlington Terrier</a></li>
-			<li><a href="http://en.wikipedia.org/wiki/Belgian_Shepherd_Dog_(Groenendael)">Belgian Shepherd</a></li>
-			<li><a href="http://en.wikipedia.org/wiki/Bergamasco_Shepherd">Bergamasco</a></li>
-			<li><a href="https://en.wikipedia.org/wiki/Bichon_Fris%C3%A9">Bichon Frisé</a></li>
-			<li><a href="http://en.wikipedia.org/wiki/Bloodhound">Bloodhound</a></li>
-			<li><a href="http://en.wikipedia.org/wiki/Bolognese_(dog)">Bolognese</a></li>
-			<li><a href="http://en.wikipedia.org/wiki/Border_Collie">Border Collie</a></li>
-			<li><a href="http://en.wikipedia.org/wiki/Border_Terrier">Border Terrier</a></li>
-			<li><a href="http://en.wikipedia.org/wiki/Borzoi">Borzoi</a></li>
-			<li><a href="http://en.wikipedia.org/wiki/Bouvier_des_Flandres">Bouvier des Flandres</a></li>
-			<li><a href="http://en.wikipedia.org/wiki/Briard">Briard</a></li>
-			<li><a href="http://en.wikipedia.org/wiki/Bull_Terrier">Bull Terrier</a></li>
-			<li><a href="http://en.wikipedia.org/wiki/Bulldog">Bulldog</a></li>
-		</ul>
+	  #intro:target{
+		text-decoration: underline;
+	  }
 
-		<h1>Form Interaction</h1>
-		<form>
-			<input type="text" class="text" placeholder="Enter favorite dog breed"/>
-			<input type="submit" class="submit"/>
-		</form>
+      /* Form pseudo-classes */
+      input {
+        padding: 6px 12px 6px 12px;
+        border: 1px solid #665544;
+        color: #706e6e;
+        font-size: 1em;
+        border-radius: 10px;
+      }
+      input.submit:hover {
+        background-color: #32b1c5;
+        color: whitesmoke;
+      }
+      input.submit:active {
+        background-color: chocolate;
+      }
+      input.text:focus {
+        color: #665544;
+      }
+      input.text::placeholder,
+      input.text {
+        color: #c37425;
+      }
+    </style>
+  </head>
 
-	</body>
+  <body>
+    <h1>Link Interaction</h1>
+    <p id="intro">
+      Dog breeds are incredibly diverse, ranging from tiny Chihuahuas to giant
+      Great Danes. Each breed has its own unique characteristics, temperament,
+      and history. Some breeds, like Border Collies, are known for their
+      intelligence and agility, while others, such as Golden Retrievers, are
+      celebrated for their friendly and loyal nature. Whether you’re looking for
+      a playful companion, a working partner, or a gentle family pet, there’s a
+      dog breed suited to every lifestyle and preference.
+    </p>
+
+    <h2>Dog Breeds: <span class="letter">B</span></h2>
+    <ul>
+      <li>
+        <a href="http://en.wikipedia.org/wiki/Basset_Hound">Basset Hound</a>
+      </li>
+      <li><a href="http://en.wikipedia.org/wiki/Beagle">Beagle</a></li>
+      <li>
+        <a href="http://en.wikipedia.org/wiki/Bearded_Collie">Bearded Collie</a>
+      </li>
+      <li><a href="http://en.wikipedia.org/wiki/Beauceron">Beauceron</a></li>
+      <li>
+        <a href="http://en.wikipedia.org/wiki/Bedlington_Terrier"
+          >Bedlington Terrier</a
+        >
+      </li>
+      <li>
+        <a
+          href="http://en.wikipedia.org/wiki/Belgian_Shepherd_Dog_(Groenendael)"
+          >Belgian Shepherd</a
+        >
+      </li>
+      <li>
+        <a href="http://en.wikipedia.org/wiki/Bergamasco_Shepherd"
+          >Bergamasco</a
+        >
+      </li>
+      <li>
+        <a href="https://en.wikipedia.org/wiki/Bichon_Fris%C3%A9"
+          >Bichon Frisé</a
+        >
+      </li>
+      <li><a href="http://en.wikipedia.org/wiki/Bloodhound">Bloodhound</a></li>
+      <li>
+        <a href="http://en.wikipedia.org/wiki/Bolognese_(dog)">Bolognese</a>
+      </li>
+      <li>
+        <a href="http://en.wikipedia.org/wiki/Border_Collie">Border Collie</a>
+      </li>
+      <li>
+        <a href="http://en.wikipedia.org/wiki/Border_Terrier">Border Terrier</a>
+      </li>
+      <li><a href="http://en.wikipedia.org/wiki/Borzoi">Borzoi</a></li>
+      <li>
+        <a href="http://en.wikipedia.org/wiki/Bouvier_des_Flandres"
+          >Bouvier des Flandres</a
+        >
+      </li>
+      <li><a href="http://en.wikipedia.org/wiki/Briard">Briard</a></li>
+      <li>
+        <a href="http://en.wikipedia.org/wiki/Bull_Terrier">Bull Terrier</a>
+      </li>
+      <li><a href="http://en.wikipedia.org/wiki/Bulldog">Bulldog</a></li>
+    </ul>
+
+    <h1>Form Interaction</h1>
+    <form>
+      <input type="text" class="text" placeholder="Enter favorite dog breed" />
+      <input type="submit" class="submit" />
+    </form>
+
+	<a href="#intro">Back to Intro</a>
+  </body>
 </html>

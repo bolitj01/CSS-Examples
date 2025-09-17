@@ -1,0 +1,135 @@
+/* --- Base + Layout (same as solution) --- */
+:root {
+  --bg: #0f172a;
+  --card: #111827;
+  --text: #e5e7eb;
+  --accent1: #3b82f6;
+  --accent2: #10b981;
+  --accent3: #f59e0b;
+  --para-bg: #1f2937;
+  --para-border: #374151;
+}
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font: 16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell,
+    "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+  color: var(--text);
+  background: radial-gradient(1200px 800px at 20% 0%, #0b1228, var(--bg));
+  display: grid;
+  place-items: start center;
+  padding: 48px 16px;
+}
+
+.wrap {
+  width: min(900px, 96vw);
+}
+
+h1 {
+  font-size: clamp(1.25rem, 1.2rem + 1vw, 2rem);
+  margin: 0 0 16px;
+  font-weight: 700;
+}
+
+p.lede {
+  margin: 0 0 24px;
+  color: #cbd5e1;
+}
+
+nav {
+  background: var(--card);
+  border: 1px solid #1f2937;
+  border-radius: 14px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  overflow: hidden;
+}
+
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  border-bottom: 1px solid #1f2937;
+}
+
+.menu > li {
+  position: relative;
+  border-right: 1px solid #1f2937;
+}
+.menu > li:last-child {
+  border-right: none;
+}
+
+.nav-btn {
+  display: block;
+  width: 100%;
+  padding: 14px 16px;
+  text-align: center;
+  text-decoration: none;
+  color: #0b1020;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  background: var(--accent1);
+  outline: none;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+
+  /* 
+  TODO: Add animation that cycles through three colors over 5 seconds repeating infinitely. 
+  */
+}
+
+.nav-btn:focus-visible {
+  box-shadow: 0 0 0 3px #fff, 0 0 0 5px #6366f1;
+}
+
+.dropdown {
+  margin: 0;
+  padding: 14px 16px 18px;
+  background: var(--para-bg);
+  border-top: 1px solid var(--para-border);
+
+  /* 
+  TODO: Begin hidden and reveal gradually using 
+  opacity, max-height, and translation over 1 second:
+  */
+}
+
+/* 
+TODO: Reveal rule:
+When the parent <li> is hovered or focused, reveal the dropdown.
+*/
+
+.dropdown strong {
+  color: #f3f4f6;
+}
+.dropdown em {
+  color: #93c5fd;
+}
+
+/* TODO: Write the animation @keyframes for the color cycling */
+
+
+@media (max-width: 520px) {
+  .menu {
+    grid-template-columns: 1fr;
+  }
+  .menu > li {
+    border-right: none;
+    border-bottom: 1px solid #1f2937;
+  }
+  .menu > li:last-child {
+    border-bottom: none;
+  }
+}

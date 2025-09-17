@@ -1,0 +1,177 @@
+/* --- Base + Layout --- */
+:root {
+  --bg: #0f172a; /* slate-900 */
+  --card: #111827; /* gray-900 */
+  --text: #e5e7eb; /* gray-200 */
+  --color1: #3b82f6; /* blue-500 */
+  --color2: #0d8e20; /* emerald-500 */
+  --color3: #f5460b; /* amber-500 */
+  --para-bg: #1f2937; /* gray-800 */
+  --para-border: #374151; /* gray-700 */
+}
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font: 16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell,
+    "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+  color: var(--text);
+  background: radial-gradient(1200px 800px at 20% 0%, #0b1228, var(--bg));
+  display: grid;
+  place-items: start center;
+  padding: 48px 16px;
+}
+
+.wrap {
+  width: min(900px, 96vw);
+}
+
+h1 {
+  font-size: clamp(1.25rem, 1.2rem + 1vw, 2rem);
+  margin: 0 0 16px;
+  font-weight: 700;
+}
+
+p.lede {
+  margin: 0 0 24px;
+  color: #cbd5e1; /* slate-300 */
+}
+
+/* --- Nav --- */
+nav {
+  background: var(--card);
+  border: 1px solid #1f2937;
+  border-radius: 14px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  overflow: hidden;
+}
+
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  border-bottom: 1px solid #1f2937;
+}
+
+.menu > li {
+  position: relative;
+  border-right: 1px solid #1f2937;
+}
+.menu > li:last-child {
+  border-right: none;
+}
+
+.nav-btn {
+  display: block;
+  width: 100%;
+  padding: 14px 16px;
+  text-align: center;
+  text-decoration: none;
+  color: #0b1020;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  background: var(--color1);
+  outline: none;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  /* --- Animation: cycle 3 colors over 5s --- */
+  animation: navPulse 5s linear infinite alternate;
+}
+
+/* Give focus ring for keyboard users */
+.nav-btn:focus-visible {
+  box-shadow: 0 0 0 3px #fff, 0 0 0 5px #6366f1; /* indigo */
+}
+
+/* --- Dropdown Paragraph (the target for the transition) --- */
+.dropdown {
+  margin: 0;
+  padding: 14px 16px 18px;
+  background: var(--para-bg);
+  border-top: 1px solid var(--para-border);
+
+  /* Hide initially: use max-height + transform + opacity for a smooth reveal */
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-8px);
+  overflow: hidden;
+
+  /* --- Transition: reveal/translate over 1s on hover/focus-within --- */
+  transition: max-height 1s ease, opacity 1s ease, transform 1s ease;
+}
+
+/* Reveal paragraph when the list item is hovered (mouse) or focused (keyboard) */
+li:hover .dropdown,
+li:focus-within .dropdown {
+  max-height: 12rem; /* big enough to fit content */
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Subtle text polish */
+.dropdown strong {
+  color: #f3f4f6;
+} /* gray-100 */
+.dropdown em {
+  color: #93c5fd;
+} /* blue-300 */
+
+/* --- Keyframes for the button color cycle --- */
+@keyframes navPulse {
+  0% {
+    background: var(--color1);
+  }
+  20% {
+    background: var(--color2);
+  }
+  30% {
+    background: var(--color2);
+  }
+  50% {
+    background: var(--color3);
+  }
+  60% {
+    background: var(--color3);
+  }
+  90% {
+    background: var(--color1);
+  }
+  100% {
+    background: var(--color1);
+  }
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .dropdown {
+    transition: none;
+  }
+  .nav-btn {
+    animation: none;
+  }
+}
+
+/* Make it look nice on small screens */
+@media (max-width: 520px) {
+  .menu {
+    grid-template-columns: 1fr;
+  }
+  .menu > li {
+    border-right: none;
+    border-bottom: 1px solid #1f2937;
+  }
+  .menu > li:last-child {
+    border-bottom: none;
+  }
+}

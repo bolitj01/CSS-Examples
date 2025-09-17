@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Nav Transitions + Animations — Solution</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="solutions/animations.css">
+</head>
+<body>
+  <div class="wrap">
+    <h1>Practice: CSS Transition + Animation</h1>
+    <p class="lede">
+      Hover or focus each button. The paragraph <em>drops down</em> over 1 second (transition),
+      while the buttons cycle through <strong>three colors</strong> over 5 seconds (animation).
+    </p>
+
+    <nav aria-label="Main">
+      <ul class="menu">
+        <li>
+          <a class="nav-btn" href="#" aria-expanded="false">Home</a>
+          <p class="dropdown">
+            <strong>Home</strong> shows an overview. This paragraph is revealed by a 1s transition that changes
+            <code>max-height</code>, <code>opacity</code>, and <code>transform</code>.
+          </p>
+        </li>
+        <li>
+          <a class="nav-btn" href="#" aria-expanded="false">About</a>
+          <p class="dropdown">
+            <strong>About</strong> explains your mission. Using <code>li:hover .dropdown</code> and
+            <code>li:focus-within .dropdown</code> supports mouse and keyboard.
+          </p>
+        </li>
+        <li>
+          <a class="nav-btn" href="#" aria-expanded="false">Services</a>
+          <p class="dropdown">
+            <strong>Services</strong> lists what you offer. The button’s background runs a 5s, infinite, alternating
+            3-color animation via <code>@keyframes</code>.
+          </p>
+        </li>
+        <li>
+          <a class="nav-btn" href="#" aria-expanded="false">Contact</a>
+          <p class="dropdown">
+            <strong>Contact</strong> has ways to reach you. Try tabbing to focus the items—no mouse needed.
+          </p>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</body>
+</html>
